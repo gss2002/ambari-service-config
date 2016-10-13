@@ -1,0 +1,19 @@
+{
+    "types" : [
+     {
+        "type" : "hadoop-env",
+        "reason" : "Update HadoopEnv ProxyUser Group to Proper Group",
+        "properties": {
+            "proxyuser_group" : "hadoop-users"
+        }
+     },
+     {
+        "type" : "core-site",
+        "reason" : "Update HadoopEnv ProxyUser Group to Proper Group",
+        "properties": {
+            "hadoop.proxyuser.knox.groups" : "hadoop-users",
+            "hadoop.proxyuser.HTTP.groups" : "hadoop-users"
+        }
+     }
+  ]
+}

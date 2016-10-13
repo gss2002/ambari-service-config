@@ -1,0 +1,41 @@
+{
+    "types" : [
+     {
+		"type" : "ranger-hdfs-audit",
+		"reason" : "Enable Ranger Audit to Solr",
+		"properties": {
+        	"xasecure.audit.destination.db" : "false",
+	    	"xasecure.audit.destination.solr" : "true",
+	    	"xasecure.audit.destination.solr.urls" : "http://solrauditserver.hdp.example.com:6083/solr/ranger_audits"
+		}
+     },
+     {
+		"type" : "ranger-hive-audit",
+		"reason" : "Enable Ranger Audit to Solr",
+		"properties": {
+        	"xasecure.audit.destination.db" : "false",
+	    	"xasecure.audit.destination.solr" : "true",
+	    	"xasecure.audit.destination.solr.urls" : "http://solrauditserver.hdp.example.com:6083/solr/ranger_audits"
+		}
+     },
+     {
+		"type" : "ranger-hbase-audit",
+		"reason" : "Enable Ranger Audit to Solr",
+		"properties": {
+        	"xasecure.audit.destination.db" : "false",
+	    	"xasecure.audit.destination.solr" : "true",
+	    	"xasecure.audit.destination.solr.urls" : "http://solrauditserver.hdp.example.com:6083/solr/ranger_audits"
+		}
+     },
+     {
+		"type" : "ranger-admin-site",
+		"reason" : "Enable Ranger Audit to Solr",
+		"properties": {
+        	"ranger.audit.solr.password" : "NONE",
+	    	"ranger.audit.source.type" : "solr",
+	    	"ranger.audit.solr.username" : "ranger_solr",
+	    	"ranger.audit.solr.urls" : "http://solrauditserver.hdp.example.com:6083/solr/ranger_audits"
+		}
+     }
+  ]
+}

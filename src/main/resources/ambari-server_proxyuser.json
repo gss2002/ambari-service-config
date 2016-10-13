@@ -1,0 +1,37 @@
+{
+    "types" : [
+     {
+        "type" : "core-site",
+        "reason" : "Update core-site to enable ambari-server to be able to proxy for Views",
+        "properties": {
+            "hadoop.proxyuser.ambari-server.groups" : "hadoop-users",
+            "hadoop.proxyuser.ambari-server.hosts" : "*"
+        }
+     },
+     {
+        "type" : "webhcat-site",
+        "reason" : "Update webhcat-site to enable ambari-server to be able to proxy for Views",
+        "properties": {
+            "webhcat.proxyuser.ambari-server.groups" : "hadoop-users",
+            "webhcat.proxyuser.ambari-server.hosts" : "*"
+        }
+     },
+     {
+        "type" : "oozie-site",
+        "reason" : "Update oozie-site to enable ambari-server to be able to proxy for Views",
+        "properties": {
+            "oozie.service.ProxyUserService.proxyuser.ambari-server.groups" : "hadoop-users",
+            "oozie.service.ProxyUserService.proxyuser.ambari-server.hosts" : "*"
+        }
+     },
+     {
+        "type" : "yarn-site",
+        "reason" : "Update yarn-site to enable ambari-server to be able to proxy for Views",
+        "properties": {
+            "yarn.timeline-service.http-authentication.proxyuser.ambari-server.groups" : "hadoop-users",
+            "yarn.timeline-service.http-authentication.proxyuser.ambari-server.hosts" : "*",
+            "yarn.timeline-service.http-authentication.proxyuser.ambari-server.users" : "*"
+        }
+     }
+  ]
+}

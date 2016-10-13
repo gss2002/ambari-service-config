@@ -1,0 +1,24 @@
+{
+    "types" : [
+     {
+		"type" : "hdfs-site",
+		"reason" : "Update Entries to Allow Hadoop to be MultiHomed",
+		"properties": {
+        	"dfs.client.use.datanode.hostname" : "true",
+	    	"dfs.datanode.use.datanode.hostname" : "true",
+	    	"dfs.namenode.http-bind-host" : "0.0.0.0",
+	    	"dfs.namenode.https-bind-host" : "0.0.0.0",
+	    	"dfs.namenode.rpc-bind-host" : "0.0.0.0",
+	    	"dfs.namenode.servicerpc-bind-host" : "0.0.0.0"
+		}
+     },
+     {
+        "type" : "hbase-site",
+        "reason" : "Update Entries to Allow Hadoop to be MultiHomed",
+        "properties": {
+            "hbase.master.ipc.address" : "0.0.0.0",
+            "hbase.regionserver.ipc.address" : "0.0.0.0"
+        }
+     }
+  ]
+}

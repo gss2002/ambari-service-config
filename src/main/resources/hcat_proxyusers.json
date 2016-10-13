@@ -1,0 +1,11 @@
+{
+    "types" : [
+     {
+        "type" : "webhcat-site",
+        "reason" : "Update HadoopEnv ProxyUser Group to Proper Group",
+        "properties": {
+            "webhcat.proxyuser.knox.groups" : "hadoop-users",
+        }
+     }
+  ]
+}

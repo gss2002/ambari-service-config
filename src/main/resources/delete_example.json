@@ -1,0 +1,13 @@
+{
+    "types" : [
+     {
+		"type" : "ranger-hdfs-audit",
+		"reason" : "Enable Ranger Audit to Solr",
+		"properties": {
+        	"xasecure.audit.destination.db" : "false",
+	    	"xasecure.audit.destination.solr" : "true",
+	    	"xasecure.audit.destination.solr.urls" : "AMBARI_DELETE"
+		}
+     },
+  ]
+}

@@ -1,0 +1,38 @@
+{
+    "types" : [
+     {
+		"type" : "core-site",
+		"reason" : "Update Entries to Allow Hadoop HTTP Kerberos SPNEGO",
+		"properties": {
+        	"hadoop.http.authentication.simple.anonymous.allowed" : "false",
+	    	"hadoop.http.authentication.signature.secret.file" : "/home/hdfs",
+	    	"hadoop.http.authentication.type" : "kerberos",
+	    	"hadoop.http.authentication.kerberos.keytab" : "/etc/security/keytabs/spnego.service.keytab",
+	    	"hadoop.http.authentication.kerberos.principal" : "HTTP/_HOST@HDP.EXAMPLE.COM",
+	    	"hadoop.http.filter.initializers" : "org.apache.hadoop.security.AuthenticationFilterInitializer",
+			"hadoop.http.authentication.cookie.domain" : "hdp.example.com",
+		
+		}
+     },
+     {
+        "type" : "yarn-site",
+        "reason" : "Update Entries to Allow Hadoop HTTP Kerberos SPNEGO",
+        "properties": {
+            "yarn.admin.acl" : "yarn,mapred,ambari_qa hadoop-admin,hadoop-ops",
+            "yarn.timeline-service.http-authentication.cookie.domain" : "hdp.example.com",
+            "yarn.timeline-service.http-cross-origin.enabled": "true",
+            "yarn.timeline-service.http-authentication.simple.anonymous.allowed": "false",
+            "yarn.timeline-service.http-authentication.signature.secret.file": "/home/hdfs"
+        }
+     },
+     {
+        "type" : "oozie-site",
+        "reason" : "Update Entries to Allow Hadoop HTTP Kerberos SPNEGO",
+        "properties": {
+            "oozie.authentication.cookie.domain" : "hdp.example.com",
+            "oozie.authentication.simple.anonymous.allowed" : "false",
+        }
+     }
+     
+  ]
+}

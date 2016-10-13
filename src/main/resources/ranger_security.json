@@ -1,0 +1,11 @@
+{
+    "types" : [
+     {
+        "type" : "hdfs-site",
+        "reason" : "Secure HDFS for Ranger Access",
+        "properties": {
+			"fs.permissions.umask-mode": "077"
+        }
+     }
+  ]
+}

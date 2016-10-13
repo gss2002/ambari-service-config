@@ -1,0 +1,11 @@
+{
+    "types" : [
+     {
+        "type" : "oozie-site",
+        "reason" : "Update Oozie ProxyUser Group to Proper Group",
+        "properties": {
+            "oozie.service.ProxyUserService.proxyuser.knox.groups" : "hadoop-users",
+        }
+     }
+  ]
+}

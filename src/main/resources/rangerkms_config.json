@@ -1,0 +1,46 @@
+{
+    "types" : [
+     {
+        "type" : "kms-site",
+        "reason" : "Secure HDFS for Ranger Access",
+        "properties": {
+			"hadoop.kms.proxyuser.hive.users": "*",
+			"hadoop.kms.proxyuser.oozie.users": "*",
+			"hadoop.kms.proxyuser.HTTP.users": "*",
+			"hadoop.kms.proxyuser.ambari.users": "*",
+			"hadoop.kms.proxyuser.yarn.users": "*",
+			"hadoop.kms.proxyuser.hive.hosts": "*",
+			"hadoop.kms.proxyuser.oozie.hosts": "*",
+			"hadoop.kms.proxyuser.HTTP.hosts": "*",
+			"hadoop.kms.proxyuser.ambari.hosts": "*",
+			"hadoop.kms.proxyuser.yarn.hosts": "*",
+			"hadoop.kms.proxyuser.hive.groups": "*",
+			"hadoop.kms.proxyuser.oozie.groups": "*",
+			"hadoop.kms.proxyuser.HTTP.groups": "*",
+			"hadoop.kms.proxyuser.ambari.groups": "*",
+			"hadoop.kms.proxyuser.yarn.groups": "*",
+			"hadoop.kms.proxyuser.rangeradmin.groups": "*",
+			"hadoop.kms.proxyuser.rangeradmin.hosts": "*",
+			"hadoop.kms.proxyuser.rangeradmin.users": "*",
+			"hadoop.kms.proxyuser.keyadmin.groups": "*",
+			"hadoop.kms.proxyuser.keyadmin.hosts": "*",
+			"hadoop.kms.proxyuser.keyadmin.users": "*"
+
+			
+			
+        }
+     },
+     {
+        "type" : "ranger-kms-audit",
+        "reason" : "Secure HDFS for Ranger Access",
+        "properties": {
+			"xasecure.audit.destination.hdfs.dir": "hdfs://clusternameservice/ranger/audit",
+        	"xasecure.audit.destination.db" : "false",
+	    	"xasecure.audit.destination.solr" : "true",
+	    	"xasecure.audit.destination.solr.urls" : "http://solrauditserver.hdp.example.com:6083/solr/ranger_audits"		
+        }
+     }
+  ]
+}
+
+
